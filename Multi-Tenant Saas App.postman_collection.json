@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "fb929ccf-b70a-460a-90d4-bf7ee497da53",
+		"name": "Multi-Tenant Saas App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20781198"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"vijaybfriendly@gmail.com\",\r\n    \"password\": \"Vijay@123\",\r\n    \"org_name\": \"Vijay\",\r\n    \"role_desc\": \"I am a Backend Developer\",\r\n    \"role_name\": \"Associate IT Developer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}users/signup/",
+					"host": [
+						"{{local_url}}users"
+					],
+					"path": [
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"vijaybfriendly@gmail.com\",\r\n    \"password\":\"Vijay@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}users/signin/",
+					"host": [
+						"{{local_url}}users"
+					],
+					"path": [
+						"signin",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"vijaybfriendly@gmail.com\",\r\n    \"old_password\":\"Vijay@123\",\r\n    \"new_password\":\"Vijay@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}users/resetpass/",
+					"host": [
+						"{{local_url}}users"
+					],
+					"path": [
+						"resetpass",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invite Member",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"dhatshanamoorthy2001@gmail.com\",\r\n    \"org_id\":\"1\",\r\n    \"role_id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}users/invitemember/",
+					"host": [
+						"{{local_url}}users"
+					],
+					"path": [
+						"invitemember",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup through Invite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"dhatshanamoorthy2001@gmail.com\",\r\n    \"temp_password\":\"TECehfPJGB\",\r\n    \"new_password\":\"Dhatshana@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}users/invitesignup/",
+					"host": [
+						"{{local_url}}users"
+					],
+					"path": [
+						"invitesignup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Member",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mem_id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}users/deletemember/",
+					"host": [
+						"{{local_url}}users"
+					],
+					"path": [
+						"deletemember",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Member",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role_id\":1,\r\n    \"mem_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}users/updatemember/",
+					"host": [
+						"{{local_url}}users"
+					],
+					"path": [
+						"updatemember",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Role Wise Count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_url}}users/rolewisedata/",
+					"host": [
+						"{{local_url}}users"
+					],
+					"path": [
+						"rolewisedata",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Organization Wise Count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_url}}users/orgwisedata/",
+					"host": [
+						"{{local_url}}users"
+					],
+					"path": [
+						"orgwisedata",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Organization and Role Wise Count",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"from_date\":1725447091,\r\n//     \"to_date\":1725447091,\r\n//     \"status\":0\r\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_url}}users/orgwiserolewisedata/",
+					"host": [
+						"{{local_url}}users"
+					],
+					"path": [
+						"orgwiserolewisedata",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "http://127.0.0.1:8000/tenants/",
+			"type": "string"
+		}
+	]
+}

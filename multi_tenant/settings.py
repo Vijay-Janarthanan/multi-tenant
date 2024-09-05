@@ -86,9 +86,9 @@ WSGI_APPLICATION = 'multi_tenant.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'multi_tenant',
-        'USER': 'postgres',
-        'PASSWORD': 'Zebu@99',
+        'NAME': 'multi_tenant', #db name
+        'USER': 'postgres', #username
+        'PASSWORD': 'Zebu@99', #password
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -137,4 +137,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-SECRET_KEY = b'28cmUlFd-U45ojU2FXAraN-tuQYqwSQSOFQKuXcyzoc='
+SECRET_KEY = b'28cmUlFd-U45ojU2FXAraN-tuQYqwSQSOFQKuXcyzoc=' #Fernet and JWS Encryption key, you can use seperate secret keys and store it in a environment variable.
+MAIL_API_KEY = '' # Brevo api key
